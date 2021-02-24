@@ -39,13 +39,29 @@ const employeeInput = [
 
 
 // and to create objects for each team member (using the correct classes as blueprints!)
-function init() 
-{
-    inquirer.prompt(employeeInput);
-//     const newEngineer = new Engineer(name, id, email, github)
- }
+function init() {
+    return inquirer.prompt(employeeInput).then((response) => {
+        console.log(response);
+        if (response.role === 'Manager') {
+            const newManager = new Manager(response.name, response.id, response.email, response.officenumber);
+            employees.push(newManager);
+            console.log(employees);
+        }
 
- init(); 
+        else if (response.role === 'Engineer') {
+            const newEngineer = new Engineer(response.name, response.id, response.email, response.github);
+            employees.push(newEngineer);
+            console.log(employees);
+        }
+
+        else if (response.role === 'Intern') {
+            const newIntern = new Intern(response.name, response.id, response.email, response.role, response.school);
+            employees.push(newIntern);
+            console.log(employees);
+        }
+    })
+}
+init();
 // After the user has input all employees desired, call the `render` function (required
 // above) and pass in an array containing all employee objects; the `render` function will
 // generate and return a block of HTML including templated divs for each employee!
