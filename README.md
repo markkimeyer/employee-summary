@@ -17,6 +17,12 @@ From the command line of the terminal, type "node app2.js" to run the app. Answe
 Example of prompts: 
 
  ![Screenshot](Develop/images/usage.jpg)
+
+ ## Testing
+
+ From the command line, type "npm test" to confirm this app successfully passes the provided tests. 
+
+ ![Screenshot](Develop/images/test.jpg)
  
 ## Demo
-Watch the demo on YouTube [here](https://youtu.be/bLPoDc9HEe4).
+Watch the demo video on YouTube [here](https://youtu.be/bLPoDc9HEe4).
