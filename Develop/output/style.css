@@ -1,0 +1,35 @@
+.jumbotron {
+    color:#073642;
+    background-color: #b58900;
+    font-family: 'Truculenta', sans-serif;
+}
+ h1 {
+    font-size: 56px;
+    font-weight: 550;
+    font-family: 'Truculenta', sans-serif;
+ }
+
+
+ .card-body {
+     color:#073642;
+     font-family: 'Truculenta', sans-serif;
+     font-size:20px;
+     width: 100%;
+     display: flex;
+    float: none; 
+     margin: 0 auto;
+     flex-wrap: wrap;
+     max-width: 20rem;
+     
+ }
+.team-area {
+    display: flex;
+    float: none;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 5px;
+    padding: 1%;
+}

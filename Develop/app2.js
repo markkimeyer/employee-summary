@@ -127,7 +127,7 @@ function addRole() {
         }
     ]).then((roleResponse) => {
         if (roleResponse.role == 'Engineer') {
-            console.log(roleResponse);
+            // console.log(roleResponse);
             inquirer.prompt(engineerInput).then((response) => 
             {
             const newEngineer = new Engineer(response.name, response.id, response.email, response.github);
@@ -136,7 +136,7 @@ function addRole() {
             })
         }
        else if (roleResponse.role == 'Manager') {
-            console.log(roleResponse);
+            // console.log(roleResponse);
             inquirer.prompt(managerInput).then((response) => 
             {
             const newManager = new Manager(response.name, response.id, response.email, response.officeNumber);
@@ -145,7 +145,7 @@ function addRole() {
             })
         }
         else if (roleResponse.role == 'Intern') {
-            console.log(roleResponse);
+            // console.log(roleResponse);
             inquirer.prompt(internInput).then((response) => 
             {
             const newIntern= new Intern(response.name, response.id, response.email, response.school);
@@ -156,28 +156,6 @@ function addRole() {
     })
 }
 
-function init() {
-    return inquirer.prompt(employeeInput).then((response) => {
-        console.log(response);
-        if (response.role === 'Manager') {
-            const newManager = new Manager(response.name, response.id, response.email, response.officenumber);
-            employees.push(newManager);
-            console.log(employees)
-            addEmployee();
-        }
-        else if (response.role === 'Engineer') {
-            const newEngineer = new Engineer(response.name, response.id, response.email, response.github);
-            employees.push(newEngineer);
-            console.log(employees);
-        }
-
-        else if (response.role === 'Intern') {
-            const newIntern = new Intern(response.name, response.id, response.email, response.role, response.school);
-            employees.push(newIntern);
-            console.log(employees);
-        }
-    })
-}
 addEmployee();
 
 
